@@ -1,40 +1,24 @@
-import React from "react";
-import NavBarLogin from "../../Components/Utility/NavBarLogin";
-import Slider from "../../Components/Home/Slider";
-import HomeCategory from "../../Components/Home/HomeCategory";
-import CardProductsContainer from "../../Components/Products/CardProductsContainer";
-import DiscountSection from "../../Components/Home/DiscountSection";
-import BrandFeatured from "../../Components/Brand/BrandFeatured";
-import Footer from "../../Components/Utility/Footer";
-
+import React from 'react'
+import HomeCategory from '../../Components/Home/HomeCategory';
+import CardProductsContainer from '../../Components/Products/CardProductsContainer';
+import NavBarLogin from '../../Components/Uitily/NavBarLogin';
+import Silder from './../../Components/Home/Silder';
+import DiscountSection from './../../Components/Home/DiscountSection';
+import BrandFeatured from '../../Components/Brand/BrandFeatured';
+import Footer from '../../Components/Uitily/Footer';
 const HomePage = () => {
-  return (
-    <div className="font" style={{ minHeight: "670px" }}>
-      <NavBarLogin />
+    return (
+        <div className='font' style={{ minHeight: '670px' }}>
 
-      <Slider />
+            <Silder />
+            <HomeCategory />
+            <CardProductsContainer title="الاكثر مبيعا" btntitle="المزيد" pathText="/products" />
+            <DiscountSection />
+            <CardProductsContainer title="احدث الازياء" btntitle="المزيد" pathText="/products" />
+            <BrandFeatured title="اشهر الماركات" btntitle="المزيد"  />
 
-      <HomeCategory />
+        </div>
+    )
+}
 
-      <CardProductsContainer
-        title="الاكثر مبيعا"
-        btnTitle="المزيد"
-        pathText="/products"
-      />
-
-      <DiscountSection />
-
-      <CardProductsContainer
-        title="احدث الازياء"
-        btnTitle="المزيد"
-        pathText="/products"
-      />
-
-      <BrandFeatured title="اشهر الماركات" btnTitle="المزيد" />
-
-      <Footer />
-    </div>
-  );
-};
-
-export default HomePage;
+export default HomePage
